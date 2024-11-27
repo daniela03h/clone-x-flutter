@@ -1,13 +1,19 @@
+import 'package:clone_x/views/detailCard.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNav extends StatefulWidget {
   const CustomBottomNav({super.key});
 
   @override
-  _CustomBottomNavState createState() => _CustomBottomNavState();
+  State<CustomBottomNav> createState() => _CustomBottomNavState();
 }
 
 class _CustomBottomNavState extends State<CustomBottomNav> {
+   goToOtherView() async {
+    await Navigator.push(context, MaterialPageRoute(builder: (context) => const Detailcard()));
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,10 +29,11 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Icon(
-              Icons.home_filled,
+            IconButton(
+              onPressed: goToOtherView,
+              icon: Icon(Icons.home_filled),
               color: Colors.white,
-              size:  35
+              // size:  35
             ),
              Icon(
               Icons.search,
