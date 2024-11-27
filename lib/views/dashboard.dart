@@ -22,6 +22,7 @@ class _DashboardState extends State<Dashboard> {
           CustomAppbar(),
           Expanded(
             child: ListView(
+              padding: EdgeInsets.all(0),
               children: [
                 CustomContainerCard('https://images.pexels.com/photos/27549655/pexels-photo-27549655/free-photo-of-cielo-moda-hombre-mano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                 CustomContainerCard('https://images.pexels.com/photos/29315816/pexels-photo-29315816/free-photo-of-elegantes-cisnes-junto-al-agua-en-un-dia-tranquilo.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'),
