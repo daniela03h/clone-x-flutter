@@ -11,7 +11,12 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        border: Border(
+          top: BorderSide(color: Colors.grey), // Borde superior
+        ),
+      ),
       child: SizedBox(
         width: double.infinity,
         height: 90,

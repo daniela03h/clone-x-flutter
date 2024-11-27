@@ -55,7 +55,7 @@ class CustomCard extends StatelessWidget {
                         ),
                         SizedBox(width: 100.0),
                         Icon(
-                          Icons.star, // Ícono de estrella
+                          Icons.more_horiz,
                           color: Colors.grey,
                           size: 24, // Tamaño del ícono
                         ),
@@ -83,21 +83,35 @@ class CustomCard extends StatelessWidget {
                     height: 250,
                   ),
                   const SizedBox(height: 20), // Espaciado entre los textos
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Icon(Icons.home_filled, color: Colors.grey, size: 25),
-                      Icon(Icons.search, color: Colors.grey, size: 25),
-                      Icon(Icons.crop_square, color: Colors.grey, size: 25),
-                      Icon(Icons.people_outlined,
-                          color: Colors.grey, size: 25),
-                      Icon(Icons.notifications, color: Colors.grey, size: 25),
-                    ],
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        top: BorderSide(
+                            color: Colors.grey), // Borde superior
+                        bottom: BorderSide(
+                            color: Colors.grey), // Borde inferior
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 8.0), // Padding interno
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Icon(Icons.comment, color: Colors.grey, size: 25),
+                          Icon(Icons.repeat, color: Colors.grey, size: 25),
+                          Icon(Icons.favorite_border,
+                              color: Colors.grey, size: 25),
+                          Icon(Icons.bookmark_border,
+                              color: Colors.grey, size: 25),
+                          Icon(Icons.share, color: Colors.grey, size: 25),
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
             ],
-
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
           ),

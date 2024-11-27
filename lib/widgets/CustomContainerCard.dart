@@ -11,19 +11,13 @@ class CustomContainerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      // width: double.infinity, // Ancho de la sección
-      // height: 1000, // Altura de la sección
+      width: double.infinity, // Ancho de la sección
+      // height: 800, // Altura de la sección
       child: Container(
         color: Colors.black,
-        child: ListView.builder(
-          padding: const EdgeInsets.all(0),
-          itemCount: 10, // Número de tarjetas a mostrar
-          itemBuilder: (context, index) {
-            return Container(
+        child: Container(
               child: CustomCard(urlImage) 
-            );
-          },
-        ),
+            )
       ),
     );
   }
